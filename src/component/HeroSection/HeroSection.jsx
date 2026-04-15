@@ -1,4 +1,5 @@
 import { HiPlus } from "react-icons/hi";
+import StatsSection from "../StatsSection";
 
 const HeroSection = () => {
     return (
@@ -24,6 +25,11 @@ const HeroSection = () => {
         </div>
 
       </div>
+
+        <div className="my-8">
+            <StatsSection />
+        </div>
+
     </div>
     );
 };
