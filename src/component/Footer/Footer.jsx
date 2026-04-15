@@ -2,7 +2,7 @@ import { FaInstagram, FaFacebook, FaTwitter } from 'react-icons/fa';
 
 const Footer = () => {
     return (
-       <footer className="footer footer-horizontal footer-center bg-[#1a432e] text-white  rounded p-10 max-w-3xl mx-auto ">
+       <footer className="footer footer-horizontal footer-center bg-[#1a432e] text-white  rounded p-10 ">
  <div className=" flex flex-col justify-center items-center ">
       
       {/* Title Section */}

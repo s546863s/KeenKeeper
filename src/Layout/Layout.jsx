@@ -2,9 +2,21 @@ import Footer from "../component/Footer/Footer";
 import HeroSection from "../component/HeroSection/HeroSection";
 import NavBar from "../component/NavBar/NavBar";
 import { Outlet } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 
 
 const Layout = () => {
+    const location = useLocation();
+    useEffect(() => {
+    const pageTitle = {
+      "/": "Home - KeenKeeper",
+      "/timeline": "Timeline - KeenKeeper",
+      "/stats": "Statistics - KeenKeeper",
+    };
+
+    document.title = pageTitle[location.pathname] || "KeenKeeper";
+  }, [location]);
     return (
         <div>
            <header className="relative">

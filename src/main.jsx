@@ -11,6 +11,7 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout></Layout>,
+    errorElement:<div className='my-auto mx-auto w-full h-16'>Error Page </div>
   },
 ]);
 
