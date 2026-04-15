@@ -26,7 +26,7 @@ const HeroSection = () => {
 
       </div>
 
-        <div className="my-8">
+        <div className="mt-12">
             <StatsSection />
         </div>
 

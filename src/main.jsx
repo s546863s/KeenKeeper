@@ -6,12 +6,24 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import TimeLine from './component/Timeline/TimeLine.jsx';
+import Stats from './component/Stats/Stats.jsx';
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout></Layout>,
-    errorElement:<div className='my-auto mx-auto w-full h-16'>Error Page </div>
+    errorElement:<div className='my-auto mx-auto w-full h-16'>Error Page </div>,
+    children:[
+      {
+        path: "/timeline",
+        element:<TimeLine/>
+      },
+      {
+        path: "/stats",
+        element:<Stats/>
+      }
+    ]
   },
 ]);
 

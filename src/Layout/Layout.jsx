@@ -4,6 +4,7 @@ import NavBar from "../component/NavBar/NavBar";
 import { Outlet } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import './layout.css' 
 
 
 const Layout = () => {
