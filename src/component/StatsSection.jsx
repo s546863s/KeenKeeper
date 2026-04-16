@@ -34,7 +34,7 @@ const StatsSection = () => {
       </div>
       
       
-      <div className="max-w-7xl mx-auto mt-20 border-b border-gray-200"></div>
+      <div className="max-w-7xl mx-auto mt-8 border-b border-gray-200"></div>
     </div>
   );
 };

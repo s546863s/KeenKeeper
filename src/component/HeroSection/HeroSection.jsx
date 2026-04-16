@@ -3,7 +3,7 @@ import StatsSection from "../StatsSection";
 
 const HeroSection = () => {
     return (
-        <div className="bg-white py-16 md:py-24 px-4">
+        <div className="bg-white pt-16 md:pt-24 px-4">
       <div className="max-w-4xl mx-auto text-center">
         
         {/* Main Heading */}
