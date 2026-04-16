@@ -10,6 +10,8 @@ import {
 import TimeLine from './Pages/TimeLine/TimeLine.jsx';
 import Stats from './Pages/Stats/Stats.jsx';
 import Home from './Pages/Home/Home.jsx';
+import { FriendProvider } from './FriendContext/FriendContext.jsx';
+
 
 
 const router = createBrowserRouter([
@@ -38,6 +40,10 @@ const router = createBrowserRouter([
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+   <FriendProvider>
+  <RouterProvider router={router} />
+   </FriendProvider>
+     
+   
   </StrictMode>,
 )
