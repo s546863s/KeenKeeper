@@ -3,7 +3,7 @@ import React from 'react';
 const TimeLine = () => {
     return (
         <div>
-            Time line
+            TimeLine Pages Folder
         </div>
     );
 };

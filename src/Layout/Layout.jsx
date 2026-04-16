@@ -1,10 +1,10 @@
 import Footer from "../component/Footer/Footer";
-import HeroSection from "../component/HeroSection/HeroSection";
+
 import NavBar from "../component/NavBar/NavBar";
 import { Outlet } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-import { useEffect } from "react";
-import './layout.css' 
+import { useEffect, useState } from "react";
+
 
 
 const Layout = () => {
@@ -18,6 +18,20 @@ const Layout = () => {
 
     document.title = pageTitle[location.pathname] || "KeenKeeper";
   }, [location]);
+
+// ডাটা সেভ করার জন্য স্টেট
+    const [friends, setFriends] = useState([]);
+
+    useEffect(() => {
+        // public ফোল্ডারে থাকা json ফাইল থেকে ডাটা ফেচ করা
+        fetch('friends.json') 
+            .then(res => res.json())
+            .then(data => setFriends(data))
+            
+    }, []); 
+
+    
+
     return (
         <div>
            <header className="relative">
@@ -26,14 +40,14 @@ const Layout = () => {
                 <NavBar ></NavBar>
             </section>
             {/* Hero section Started here */}
-            <HeroSection></HeroSection>
+            
 
            </header>
 
             {/* dynamic content here*/}
             
 
-            <main className="min-h-52">
+            <main  className="max-w-5xl mx-auto">
                 <Outlet />
             </main>
 

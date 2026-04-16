@@ -6,8 +6,11 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
-import TimeLine from './component/Timeline/TimeLine.jsx';
-import Stats from './component/Stats/Stats.jsx';
+
+import TimeLine from './Pages/TimeLine/TimeLine.jsx';
+import Stats from './Pages/Stats/Stats.jsx';
+import Home from './Pages/Home/Home.jsx';
+
 
 const router = createBrowserRouter([
   {
@@ -15,6 +18,12 @@ const router = createBrowserRouter([
     element: <Layout></Layout>,
     errorElement:<div className='my-auto mx-auto w-full h-16'>Error Page </div>,
     children:[
+      {
+        path:"/",
+
+        element: <Home></Home>, 
+        loader: () =>  fetch('friends.json')
+      },
       {
         path: "/timeline",
         element:<TimeLine/>
