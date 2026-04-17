@@ -1,7 +1,11 @@
 import React, { useContext } from 'react';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { LuPhone, LuMessageSquare, LuVideo, LuCalendarClock } from "react-icons/lu";
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { FriendContext } from '../../../FriendContext/FriendContext';
+
+
 
 const FriendDetails = () => {
 
@@ -9,6 +13,7 @@ const FriendDetails = () => {
 
     const { id } = useParams(); // URL to id
     const { friends, addLog } = useContext(FriendContext);
+    
 
     // find Friend
     const friend = friends.find(f => f.id === parseInt(id));
@@ -17,22 +22,35 @@ const FriendDetails = () => {
         return <div className="text-center py-20 text-2xl">Friend not found!</div>;
     }
 
-    const handleAction = (type) => {
+ const handleAction = (type) => {
+        // new log
         const logEntry = {
             id: Date.now(),
             friendName: friend.name,
             type: type,
-            date: new Date().toLocaleDateString(),
-            time: new Date().toLocaleTimeString()
+            // time formate
+            date: new Date().toLocaleDateString('en-GB', {
+                day: 'numeric',
+                month: 'long',
+                year: 'numeric'
+            }), 
+            time: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })
         };
+
+        // add log entry
         addLog(logEntry);
-        alert(`${type} log added for ${friend.name}`);
+
+        // toast show
+        toast.success(`${type} with ${friend.name} recorded!`, {
+            position: "top-center",
+            autoClose: 2000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            theme: "light",
+        });
     };
-
-
-    const handelBack = () =>{
-        navigate('/');
-    }
 
     return (
 
@@ -105,7 +123,7 @@ const FriendDetails = () => {
                 {/* Right card */}
                 <div className="lg:col-span-3 space-y-6">
                     
-                    {/* উপরের ছোট ৩টি কার্ড (Stats) */}
+                    {/* (Stats) */}
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                         <div className="bg-white p-6 rounded-xl border shadow-sm text-center">
                             <h4 className="text-4xl font-bold text-[#244d40]">{friend.days_since_contact}</h4>
@@ -152,6 +170,8 @@ const FriendDetails = () => {
                 </div>
             </div>
         </div>
+        {/* toast show */}
+            <ToastContainer />
        </section>
     );
 };
