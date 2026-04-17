@@ -1,5 +1,5 @@
 import { HiPlus } from "react-icons/hi";
-import StatsSection from "../StatsSection";
+import StatsSection from "../StatsSection/StatsSection";
 
 const HeroSection = () => {
     return (

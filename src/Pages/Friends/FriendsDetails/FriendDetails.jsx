@@ -177,3 +177,4 @@ const FriendDetails = () => {
 };
 
 export default FriendDetails;
+
