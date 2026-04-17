@@ -9,16 +9,22 @@ import { useEffect,  } from "react";
 
 const Layout = () => {
     const location = useLocation();
+    
     useEffect(() => {
     const pageTitle = {
       "/": "Home - KeenKeeper",
       "/timeline": "Timeline - KeenKeeper",
       "/stats": "Statistics - KeenKeeper",
+      
     };
+    
 
     document.title = pageTitle[location.pathname] || "KeenKeeper";
+
+
   }, [location]);
 
+    window.scrollTo(0, 0);
 
     
 
