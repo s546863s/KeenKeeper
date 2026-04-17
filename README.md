@@ -1,17 +1,134 @@
-# React + Vite
+# 📌 Friend Tracker App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🚀 Project Overview
 
-Currently, two official plugins are available:
+Friend Tracker App is a responsive web application that helps users maintain and improve their relationships by tracking interactions with friends. Users can view friend details, log interactions (Call, Text, Video), and analyze their communication patterns through a clean and user-friendly interface.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 🛠️ Technologies Used
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+* ⚛️ React.js
+* 🌐 React Router DOM
+* 🎨 Tailwind CSS
+* 📊 Recharts
+* 🔔 React Toastify (for notifications)
+* 📁 JSON (for mock data)
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# KeenKeeper
+## ✨ Key Features
+
+### 👥 Friend Management
+
+* View all friends in a responsive grid layout
+* Each friend card shows image, name, tags, status, and last contact info
+* Click on any friend to see detailed information
+
+### 📞 Interaction Tracking
+
+* Log interactions (Call, Text, Video) from Friend Details page
+* Automatically adds entries to Timeline
+* Toast notification appears on every interaction
+
+### 📜 Timeline System
+
+* Displays history of all interactions
+* Shows date, icon, and interaction type
+* Filter timeline by Call / Text / Video
+
+### 📊 Analytics Dashboard
+
+* Visualize interaction data using Pie Chart
+* Understand communication patterns easily
+
+### 🎯 Additional Functionalities
+
+* Fully responsive design (Mobile, Tablet, Desktop)
+* Active navigation highlighting
+* Loading spinner while fetching data
+* Custom 404 page for invalid routes
+* Smooth routing without reload issues
+
+---
+
+## 📂 Project Structure (Simplified)
+
+```
+src/
+│── components/
+│── pages/
+│── Layout/
+│── data/ (friends.json)
+│── routes/
+│── App.jsx
+│── main.jsx
+```
+
+---
+
+## 📱 Responsive Design
+
+This app is fully responsive and works seamlessly across:
+
+* 📱 Mobile Devices
+* 📲 Tablets
+* 💻 Desktop Screens
+
+---
+
+## ⚙️ Setup & Installation
+
+1. Clone the repository:
+
+```bash
+git clone <your-repo-link>
+```
+
+2. Navigate to the project folder:
+
+```bash
+cd friend-tracker-app
+```
+
+3. Install dependencies:
+
+```bash
+npm install
+```
+
+4. Run the project:
+
+```bash
+npm run dev
+```
+
+---
+
+## 🌐 Live Demo
+
+🔗 Live Link: *(https://keenkeeper-814.netlify.app/)*
+
+---
+
+## 📦 GitHub Repository
+
+🔗 Repo Link: *(https://github.com/s546863s/KeenKeeper.githttps://github.com/s546863s/KeenKeeper.git)*
+
+---
+
+## 🎯 Future Improvements (Optional)
+
+* Sort timeline (Newest / Oldest)
+* Search functionality for friends or interactions
+* Add real backend (MongoDB / Firebase)
+
+---
+
+## 🙌 Conclusion
+
+This project demonstrates practical use of React, routing, state management, and data visualization while focusing on clean UI/UX and real-world problem solving.
+
+---
+
+⭐ Thank you for checking out this project!
