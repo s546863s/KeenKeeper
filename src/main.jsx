@@ -12,6 +12,7 @@ import Stats from './Pages/Stats/Stats.jsx';
 import Home from './Pages/Home/Home.jsx';
 import { FriendProvider } from './FriendContext/FriendContext.jsx';
 import FriendDetails from './Pages/Friends/FriendsDetails/FriendDetails.jsx';
+import ErrorPage from './component/ErrorPage/ErrorPage.jsx';
 
 
 
@@ -19,13 +20,14 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Layout></Layout>,
-    errorElement:<div className='my-auto mx-auto w-full h-16'>Error Page </div>,
+    errorElement:<ErrorPage />,
     children:[
       {
         path:"/",
 
         element: <Home></Home>, 
-        loader: () =>  fetch('friends.json')
+        loader: () =>  fetch('friends.json'),
+        
       },
       {
         path: "/timeline",

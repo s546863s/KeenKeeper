@@ -14,7 +14,7 @@ const Layout = () => {
     const pageTitle = {
       "/": "Home - KeenKeeper",
       "/timeline": "Timeline - KeenKeeper",
-      "/stats": "Statistics - KeenKeeper",
+      "/stats": "Stats - KeenKeeper",
       
     };
     
